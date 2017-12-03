@@ -29,6 +29,21 @@ def run_test_sum_powers():
     print('Testing the   sum_powers   function:')
     print('--------------------------------------------------')
 
+    expected = 12333300
+    actual = sum_powers(20,5)
+    print("Test 1 Expected:",expected)
+    print("         Actual:",actual)
+
+    expected = 23.30999
+    actual = sum_powers(2000, -.75)
+    print("Test 2 Expected:", expected)
+    print("         Actual:", actual)
+
+    expected = 58.05843
+    actual = sum_powers(50, .05)
+    print("Test 3 Expected:", expected)
+    print("         Actual:", actual)
+
 
 def sum_powers(n, p):
     """
@@ -49,7 +64,10 @@ def sum_powers(n, p):
     #   No fair running the code of  sum_powers  to GENERATE
     #   test cases; that would defeat the purpose of TESTING!
     # ------------------------------------------------------------------
-
+    power_sum = 0
+    for x in range(n):
+        power_sum = power_sum+(x+1)**p
+    return power_sum
 
 def run_test_sum_powers_in_range():
     """ Tests the   sum_powers_in_range   function. """
@@ -65,6 +83,21 @@ def run_test_sum_powers_in_range():
     print('--------------------------------------------------')
     print('Testing the   sum_powers_in_range   function:')
     print('--------------------------------------------------')
+
+    expected = 142.384776
+    actual = sum_powers_in_range(3,100,0.1)
+    print("Test 1 Expected:", expected)
+    print("         Actual:", actual)
+
+    expected = 6970.9968
+    actual = sum_powers_in_range(65,139,.98)
+    print("Test 2 Expected:", expected)
+    print("         Actual:", actual)
+
+    expected = 186.1654
+    actual = sum_powers_in_range(6,80,.25)
+    print("Test 3 Expected:", expected)
+    print("         Actual:", actual)
 
 
 def sum_powers_in_range(m, n, p):
@@ -86,7 +119,10 @@ def sum_powers_in_range(m, n, p):
     #   No fair running the code of  sum_powers_in_range  to GENERATE
     #   test cases; that would defeat the purpose of TESTING!
     # ------------------------------------------------------------------
-
+    power_sum = 0
+    for x in range(n+1-m):
+        power_sum = power_sum+(x+m)**p
+    return power_sum
 
 # ----------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
