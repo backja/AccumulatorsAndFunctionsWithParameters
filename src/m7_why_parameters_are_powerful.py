@@ -59,7 +59,7 @@ def draw_circles():
     for k in range(21):
         circle = rg.Circle(center, 10 * k)
         circle.attach_to(window)
-        window.render(0.05)  # Pauses for 0.05 seconds after rendering.
+        window.render(.05)  # Pauses for 0.05 seconds after rendering.
 
     window.close_on_mouse_click()
 
@@ -105,7 +105,7 @@ def better_draw_circles(r):
     for k in range(21):
         circle = rg.Circle(center, r * k)
         circle.attach_to(window)
-        window.render(0.05)  # Pauses for 0.05 seconds after rendering.
+        window.render(.05)  # Pauses for 0.05 seconds after rendering.
 
     window.close_on_mouse_click()
 # ----------------------------------------------------------------------
@@ -154,7 +154,7 @@ def even_better_draw_circles(radius,color,number_of_circles):
         circle = rg.Circle(center, radius * k)
         circle.outline_color=color
         circle.attach_to(window)
-        window.render(0.05)  # Pauses for 0.05 seconds after rendering.
+        window.render(.05)  # Pauses for 0.05 seconds after rendering.
 
     window.close_on_mouse_click()
 
